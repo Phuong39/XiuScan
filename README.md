@@ -22,6 +22,10 @@ PS: 取名为XiuScan因为带我入安全的大哥是修君
 
 Struts2系列漏洞扫描，无害化命令检测，使用命令**struts2**
 
+查看已支持模块：`./xiuscan struts2 --list`
+
+![](https://github.com/EmYiQing/XiuScan/blob/master/img/1.png)
+
 ```shell
 ./xiuscan struts2 -t http://127.0.0.1/ -o result.json
 ```
