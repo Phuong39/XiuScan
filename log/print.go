@@ -48,7 +48,8 @@ func getTime() string {
 func checkOS() bool {
 	sysType := runtime.GOOS
 	if sysType == "windows" {
-		return true
+		return false
+		//return true
 	}
 	return false
 }

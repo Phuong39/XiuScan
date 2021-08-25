@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/EmYiQing/XiuScan/core/struts2"
 	"github.com/EmYiQing/XiuScan/log"
 	"github.com/EmYiQing/XiuScan/util"
 	"github.com/urfave/cli"
@@ -26,14 +27,25 @@ func main() {
 			Usage: "use struts2 scan",
 			Flags: []cli.Flag{
 				cli.StringFlag{
-					Name:     "target, t",
-					Usage:    "target url",
-					Required: true,
+					Name:  "target, t",
+					Usage: "target url",
+				},
+				cli.BoolFlag{
+					Name:  "list, l",
+					Usage: "support list",
 				},
 			},
 			Action: func(c *cli.Context) error {
 				url := util.CheckUrl(c.String("target"))
-				if url != "" {
+				if c.Bool("list") {
+					log.Info("struts2 support:")
+					modules := struts2.GetModules()
+					for _, module := range modules {
+						fmt.Printf("%s: %s\n", module.Code, module.Desc)
+					}
+					return nil
+				}
+				if url == "" {
 					return nil
 				}
 				log.Info("target is: %s", url)
