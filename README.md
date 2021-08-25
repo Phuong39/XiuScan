@@ -16,7 +16,7 @@ PS: 取名为XiuScan因为带我入安全的大哥是修君
 
 - 使用ceye.io平台做无回显漏洞验证，提供api token即可自动化检测
 
-- 将会用golang实现简化版ysoserial，不借助java生成payload
+- 将会用golang实现简化版ysoserial，不借助java生成payload（已完成CC1）
 
 ## Struts2
 
@@ -26,8 +26,6 @@ Struts2系列漏洞扫描，无害化命令检测，使用命令**struts2**
 
 ![](https://github.com/EmYiQing/XiuScan/blob/master/img/1.png)
 
-```shell
-./xiuscan struts2 -t http://127.0.0.1/ -o result.json
-```
+目前还不能扫描，只完成了所有测试用例，预计下月完善扫描逻辑
 
 ## TODO
