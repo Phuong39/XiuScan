@@ -25,6 +25,10 @@ func GetRandomInt() int {
 	return getRandomInt(1000, 2000)
 }
 
+func GetRandomIntStr(len int) string {
+	return funk.RandomString(len, []rune("1234567890"))
+}
+
 func getRandomInt(start, end int) int {
 	return funk.RandomInt(start, end)
 }
