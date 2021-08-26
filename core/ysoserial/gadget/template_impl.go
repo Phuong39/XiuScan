@@ -3,7 +3,6 @@ package gadget
 import (
 	"encoding/binary"
 	"encoding/hex"
-	"fmt"
 	"github.com/EmYiQing/XiuScan/core/tool"
 	"strings"
 )
@@ -56,7 +55,6 @@ func GetTemplateImpl(cmd string) []byte {
 	binary.BigEndian.PutUint16(cmdLenByte, uint16(cmdLen))
 	cmdLenStr := strings.ToUpper(hex.EncodeToString(cmdLenByte))
 	cmdStr := strings.ToUpper(hex.EncodeToString([]byte(cmd)))
-	fmt.Println(cmdStr)
 	beforeRandStr := "08003001000465786563010027284C6A6176612F6C6" +
 		"16E672F537472696E673B294C6A6176612F6C616E672F50726F63657" +
 		"3733B0C003200330A002B003401000D537461636B4D61705461626C6" +

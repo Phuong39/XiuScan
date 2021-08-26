@@ -9,3 +9,7 @@ func GetCC1(cmd string) []byte {
 func GetCC2(cmd string) []byte {
 	return gadget.GetCommonsCollections2(cmd)
 }
+
+func GetCC3(cmd string) []byte {
+	return gadget.GetCommonsCollections3(cmd)
+}
