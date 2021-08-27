@@ -2,12 +2,10 @@ package shiro
 
 import (
 	"encoding/base64"
-	"encoding/hex"
 )
 
-func encodeCBCShiro(key string, payload string) string {
+func EncodeCBCShiro(key string, payload []byte) string {
 	decodeKey, _ := base64.StdEncoding.DecodeString(key)
-	data, _ := hex.DecodeString(payload)
-	res := doAESCBCEncrypt(decodeKey, data)
+	res := doAESCBCEncrypt(decodeKey, payload)
 	return res
 }
