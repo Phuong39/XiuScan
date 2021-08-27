@@ -41,6 +41,7 @@ func DoRequest(req *Request) *Response {
 	for k, v := range resp.Header {
 		respHeader[k] = strings.Join(v, "; ")
 	}
+	response.Cookies = resp.Cookies()
 	response.Headers = respHeader
 	respBody, err := ioutil.ReadAll(resp.Body)
 	checkErr(err)

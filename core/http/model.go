@@ -1,5 +1,7 @@
 package http
 
+import "net/http"
+
 type Request struct {
 	Method  string
 	Url     *UrlObj
@@ -12,4 +14,5 @@ type Response struct {
 	Reason  string
 	Body    []byte
 	Headers map[string]string
+	Cookies []*http.Cookie
 }
