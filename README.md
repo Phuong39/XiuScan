@@ -8,8 +8,6 @@
 
 致力于参考xray打造一款高效方便的漏扫神器
 
-Payload动态生成依赖我另一个项目：https://github.com/EmYiQing/Gososerial
-
 计划支持Fastjson、Shiro、Struts2、Spring、WebLogic等框架
 
 PS: 取名为XiuScan因为带我入安全的大哥是修君
@@ -20,7 +18,7 @@ PS: 取名为XiuScan因为带我入安全的大哥是修君
 
 - 使用ceye.io平台做无回显漏洞验证，提供api和token即可自动化检测
 
-- 将会用golang实现简化版ysoserial，不借助java生成payload（已完成CC1）
+- Payload动态生成可以离开ysoserial和java环境，参考：https://github.com/EmYiQing/Gososerial
 
 ## Shiro
 
