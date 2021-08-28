@@ -2,6 +2,7 @@ package util
 
 import "strings"
 
+// CheckUrl 获得结尾不是/的Url
 func CheckUrl(url string) string {
 	var result string
 	url = strings.TrimSpace(url)
